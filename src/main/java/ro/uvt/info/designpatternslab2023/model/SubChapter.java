@@ -21,7 +21,8 @@ public class SubChapter {
     }
 
     public void createNewTable(String tableTitle) {
-        content.add(new Table(tableTitle));
+        Table table = new Table(tableTitle);
+        content.add(table);
     }
 
     public void print() {
