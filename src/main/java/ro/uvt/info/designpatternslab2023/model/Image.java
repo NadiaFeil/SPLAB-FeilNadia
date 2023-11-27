@@ -2,7 +2,7 @@ package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
 
-class Image implements Element{
+public class Image implements Element{
     private String imageName;
 
     public Image(String imageName) {
@@ -15,7 +15,7 @@ class Image implements Element{
 
     @Override
     public void print() {
-        System.out.println(imageName);
+        System.out.println("Image with name: " + getImageName());
     }
 
     @Override

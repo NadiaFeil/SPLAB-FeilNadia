@@ -2,7 +2,7 @@ package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
 
-class Paragraph implements Element {
+public class Paragraph implements Element {
     private String text;
 
     public Paragraph(String text) {
@@ -15,7 +15,7 @@ class Paragraph implements Element {
 
     @Override
     public void print() {
-        System.out.println(text);
+        System.out.println("Paragraph: " + getText());
     }
 
     @Override

@@ -1,9 +1,11 @@
 package ro.uvt.info.designpatternslab2023.model;
 
+import ro.uvt.info.designpatternslab2023.dao.Element;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubChapter {
+public class SubChapter implements Element {
     private String name;
     private List<Object> content;
 
@@ -25,17 +27,24 @@ public class SubChapter {
         content.add(table);
     }
 
+    @Override
     public void print() {
         System.out.println("SubChapter: " + name);
-        for (Object obj : content) {
-            if (obj instanceof Paragraph) {
-                System.out.println("Paragraph: " + ((Paragraph) obj).getText());
-            } else if (obj instanceof Image) {
-                System.out.println("Image with name: " + ((Image) obj).getImageName());
-            } else if (obj instanceof Table) {
-                System.out.println("Table with Title: " + ((Table) obj).getTableTitle());
-            }
-        }
+    }
+
+    @Override
+    public void addElement(Element element) {
+
+    }
+
+    @Override
+    public void removeElement(Element element) {
+
+    }
+
+    @Override
+    public Element get(int number) {
+        return null;
     }
 }
 
