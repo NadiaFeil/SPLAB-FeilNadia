@@ -2,41 +2,39 @@ package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
 
-import java.util.concurrent.TimeUnit;
-
-public class Image implements Element{
+public class ImageProxy implements Element {
+    private Image realImage;
     private String imageName;
 
-    public Image(String name) {
+    public ImageProxy(String name) {
         imageName = name;
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
-    public String getImageName() {
-        return imageName;
+    private Image loadImage() {
+        if (realImage == null) {
+            realImage = new Image(imageName);
+        }
+        return realImage;
     }
 
     @Override
     public void print() {
-        System.out.println("Image with name: " + getImageName());
+        loadImage().print();
     }
 
     @Override
     public void addElement(Element element) {
-
+        loadImage().addElement(element);
     }
 
     @Override
     public void removeElement(Element element) {
-
+        loadImage().removeElement(element);
     }
 
     @Override
     public Element get(int number) {
-        return null;
+        return loadImage().get(number);
     }
 }
+
