@@ -1,6 +1,6 @@
 package ro.uvt.info.designpatternslab2023.model;
 
-class Content {
+public class Content {
     private String text;
 
     public Content(String text) {

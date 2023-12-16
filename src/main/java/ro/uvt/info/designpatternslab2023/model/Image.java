@@ -39,4 +39,6 @@ public class Image implements Element{
     public Element get(int number) {
         return null;
     }
+
+
 }
