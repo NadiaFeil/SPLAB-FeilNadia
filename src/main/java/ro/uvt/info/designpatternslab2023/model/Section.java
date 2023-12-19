@@ -3,11 +3,13 @@ package ro.uvt.info.designpatternslab2023.model;
 import lombok.Getter;
 import lombok.Setter;
 import ro.uvt.info.designpatternslab2023.dao.Element;
+import ro.uvt.info.designpatternslab2023.dao.Visitee;
+import ro.uvt.info.designpatternslab2023.dao.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element {
+public class Section implements Element, Visitee {
 
     @Getter
     @Setter
@@ -52,5 +54,14 @@ public class Section implements Element {
 
     public void add(Element element){
         elements.add(element);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
+        visitor.visitSection(this);
+        for(Element e : elements){
+            e.accept(visitor);
+        }
     }
 }

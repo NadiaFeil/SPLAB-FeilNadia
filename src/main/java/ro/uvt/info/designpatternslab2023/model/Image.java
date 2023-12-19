@@ -1,10 +1,12 @@
 package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
+import ro.uvt.info.designpatternslab2023.dao.Visitee;
+import ro.uvt.info.designpatternslab2023.dao.Visitor;
 
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element{
+public class Image implements Element, Visitee {
     private String imageName;
 
     public Image(String name) {
@@ -41,4 +43,9 @@ public class Image implements Element{
     }
 
 
+    @Override
+    public void accept(Visitor visitor) {
+
+        visitor.visitImage(this);
+    }
 }

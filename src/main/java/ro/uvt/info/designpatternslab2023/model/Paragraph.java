@@ -2,8 +2,10 @@ package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
 import ro.uvt.info.designpatternslab2023.dao.AlignStrategy;
+import ro.uvt.info.designpatternslab2023.dao.Visitee;
+import ro.uvt.info.designpatternslab2023.dao.Visitor;
 
-public class Paragraph implements Element {
+public class Paragraph implements Element, Visitee {
     private String text;
     private AlignStrategy alignStrategy; // New field for alignment strategy
 
@@ -42,5 +44,10 @@ public class Paragraph implements Element {
     public Element get(int number) {
         // You may implement this method if needed
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }
