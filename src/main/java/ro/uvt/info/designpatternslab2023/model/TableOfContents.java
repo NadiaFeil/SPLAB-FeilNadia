@@ -27,22 +27,19 @@ public class TableOfContents implements Element, Visitee {
 
     @Override
     public void addElement(Element element) {
-        // Not applicable for TableOfContents
     }
 
     @Override
     public void removeElement(Element element) {
-        // Not applicable for TableOfContents
     }
 
     @Override
     public Element get(int number) {
-        // Not applicable for TableOfContents
         return null;
     }
 
     @Override
     public void accept(Visitor visitor) {
-        visitor.visitTabelOfContents(this);
+        visitor.visitTableOfContents(this);
     }
 }

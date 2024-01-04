@@ -18,7 +18,7 @@ public class BookStatistics implements Visitor {
     }
 
     @Override
-    public Object visitTabelOfContents(TabelOfContents tabelOfContents) {
+    public Object visitTableOfContents(TableOfContents tabelOfContents) {
         return null;
     }
 

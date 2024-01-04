@@ -19,7 +19,7 @@ public class RenderContentVisitor implements Visitor {
     }
 
     @Override
-    public Object visitTabelOfContents(TabelOfContents tabelOfContents) {
+    public Object visitTableOfContents(TableOfContents tabelOfContents) {
 
         tabelOfContents.print();
         return null;
