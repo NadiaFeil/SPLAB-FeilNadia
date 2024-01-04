@@ -1,8 +1,9 @@
 package ro.uvt.info.designpatternslab2023;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ro.uvt.info.designpatternslab2023.model.*;
+import ro.uvt.info.designpatternslab2023.services.AlignLeft;
+import ro.uvt.info.designpatternslab2023.services.AlignRight;
 
 @SpringBootApplication
 public class DesignPatternsLab2023Application {

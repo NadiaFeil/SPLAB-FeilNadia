@@ -2,7 +2,7 @@ package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Visitor;
 
-public class BookStatistic implements Visitor {
+public class BookStatistics implements Visitor {
 
     Integer numberOfImages=0;
     Integer numberOfTables=0;
@@ -44,5 +44,12 @@ public class BookStatistic implements Visitor {
     public Object visitTabel(Table table) {
         numberOfTables++;
         return null;
+    }
+
+    public void printStatistics() {
+        System.out.println("Book Statistics:");
+        System.out.println("*** Number of images: " + numberOfImages);
+        System.out.println("*** Number of tables: " + numberOfTables);
+        System.out.println("*** Number of paragraphs: " + numberOfParagraph);
     }
 }
