@@ -48,4 +48,9 @@ public class Image implements Element, Visitee {
 
         visitor.visitImage(this);
     }
+
+    public String getName() {
+
+        return imageName;
+    }
 }

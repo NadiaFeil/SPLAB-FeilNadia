@@ -38,5 +38,10 @@ public class Table implements Element, Visitee {
 
         visitor.visitTabel(this);
     }
+
+    public String getName() {
+
+        return tableTitle;
+    }
 }
 

@@ -1,6 +1,7 @@
 package ro.uvt.info.designpatternslab2023.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import ro.uvt.info.designpatternslab2023.dao.Element;
 import ro.uvt.info.designpatternslab2023.dao.Visitee;
@@ -41,5 +42,10 @@ public class TableOfContents implements Element, Visitee {
     @Override
     public void accept(Visitor visitor) {
         visitor.visitTableOfContents(this);
+    }
+
+    public Collection<String> getEntries() {
+
+        return entries;
     }
 }

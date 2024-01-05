@@ -44,5 +44,10 @@ public class ImageProxy implements Element, Visitee {
 
         visitor.visitImageProxy(this);
     }
+
+    public String getName() {
+
+        return imageName;
+    }
 }
 
