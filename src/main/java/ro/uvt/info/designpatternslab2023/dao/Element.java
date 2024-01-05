@@ -1,6 +1,6 @@
 package ro.uvt.info.designpatternslab2023.dao;
 
-public interface Element {
+public interface Element extends Visitee{
 
     public void print();
     public void addElement(Element element);

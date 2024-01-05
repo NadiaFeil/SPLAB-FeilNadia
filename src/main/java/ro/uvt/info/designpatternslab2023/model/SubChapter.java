@@ -1,11 +1,13 @@
 package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
+import ro.uvt.info.designpatternslab2023.dao.Visitee;
+import ro.uvt.info.designpatternslab2023.dao.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubChapter implements Element {
+public class SubChapter implements Element, Visitee {
     private String name;
     private List<Object> content;
 
@@ -45,6 +47,11 @@ public class SubChapter implements Element {
     @Override
     public Element get(int number) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }
 

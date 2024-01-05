@@ -1,11 +1,13 @@
 package ro.uvt.info.designpatternslab2023.model;
 
 import ro.uvt.info.designpatternslab2023.dao.Element;
+import ro.uvt.info.designpatternslab2023.dao.Visitee;
+import ro.uvt.info.designpatternslab2023.dao.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Section implements Element {
+public class Book extends Section implements Element, Visitee {
     private List<Author> authors;
     private List<Chapter> chapters;
 
@@ -51,5 +53,12 @@ public class Book extends Section implements Element {
 
     public void addContent(Element element) {
         getElements().add(element);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
+        //visitor.visitBook(this);
+        super.accept(visitor);
     }
 }
